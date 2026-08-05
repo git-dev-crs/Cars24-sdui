@@ -20,11 +20,11 @@
       "id": "nav_1",
       "type": "navigationTabs",
       "children": [
-        { "id": "home", "type": "tabItem", "props": { "label": "Home" }, "action": { "type": "navigate", "target": "SduiHome" } },
-        { "id": "buy", "type": "tabItem", "props": { "label": "Buy used car" }, "action": { "type": "navigate", "target": "BuyUsedCar" } },
+        { "id": "home", "type": "tabItem", "props": { "label": "Home" }, "action": { "type": "changeTab", "target": "home" } },
+        { "id": "buy", "type": "tabItem", "props": { "label": "Buy used car" }, "action": { "type": "changeTab", "target": "buy" } },
         { "id": "sell", "type": "tabItem", "props": { "label": "Sell car" }, "action": { "type": "changeTab", "target": "sell" } },
-        { "id": "loans", "type": "tabItem", "props": { "label": "Loans" }, "action": { "type": "navigate", "target": "Loans" } },
-        { "id": "insurance", "type": "tabItem", "props": { "label": "Insurance" }, "action": { "type": "navigate", "target": "Insurance" } }
+        { "id": "loans", "type": "tabItem", "props": { "label": "Loans" }, "action": { "type": "changeTab", "target": "loans" } },
+        { "id": "insurance", "type": "tabItem", "props": { "label": "Insurance" }, "action": { "type": "changeTab", "target": "insurance" } }
       ]
     },
     {
