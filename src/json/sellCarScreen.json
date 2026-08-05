@@ -1,0 +1,116 @@
+{
+  "version": "1.0",
+  "screen": "sell",
+  "initialState": {
+    "activeTab": "sell",
+    "selectedChip": ""
+  },
+  "components": [
+    {
+      "id": "header_1",
+      "type": "header",
+      "props": {
+        "logoText": "Cars24",
+        "searchPlaceholder": "Search",
+        "loginLabel": "Login"
+      },
+      "action": { "type": "navigate", "target": "Login" }
+    },
+    {
+      "id": "nav_1",
+      "type": "navigationTabs",
+      "children": [
+        { "id": "home", "type": "tabItem", "props": { "label": "Home" }, "action": { "type": "navigate", "target": "SduiHome" } },
+        { "id": "buy", "type": "tabItem", "props": { "label": "Buy used car" }, "action": { "type": "navigate", "target": "BuyUsedCar" } },
+        { "id": "sell", "type": "tabItem", "props": { "label": "Sell car" }, "action": { "type": "changeTab", "target": "sell" } },
+        { "id": "loans", "type": "tabItem", "props": { "label": "Loans" }, "action": { "type": "navigate", "target": "Loans" } },
+        { "id": "insurance", "type": "tabItem", "props": { "label": "Insurance" }, "action": { "type": "navigate", "target": "Insurance" } }
+      ]
+    },
+    {
+      "id": "hero_1",
+      "type": "heroBanner",
+      "props": {
+        "title": "Sell your car at the BEST PRICE in minutes",
+        "subtitle": "India's no.1 selling platform",
+        "inputPlaceholder": "DL 03 AB XXXX",
+        "ctaLabel": "Get instant car price",
+        "brandChips": [
+          { "id": "maruti", "label": "Maruti Suzuki" },
+          { "id": "hyundai", "label": "Hyundai" },
+          { "id": "mahindra", "label": "Mahindra" },
+          { "id": "tata", "label": "Tata" }
+        ]
+      },
+      "action": { "type": "showToast", "payload": { "message": "Fetching your car price..." } }
+    },
+    {
+      "id": "why_sell_text",
+      "type": "textSection",
+      "props": {
+        "heading": "Why sell car to Cars24?",
+        "body": "When you decide to sell your car, you shouldn't have to choose between a great price and a seamless experience. Cars24 removes the low-ball offers, endless phone calls, and paperwork anxiety."
+      }
+    },
+    {
+      "id": "what_would_you_like_heading",
+      "type": "textSection",
+      "props": { "heading": "What would you like to do?" }
+    },
+    {
+      "id": "action_grid",
+      "type": "grid",
+      "children": [
+        { "id": "check_valuation", "type": "gridItem", "props": { "title": "Check car valuation", "imageUrl": "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=400" }, "action": { "type": "navigate", "target": "CarValuation" } },
+        { "id": "scrap_earn", "type": "gridItem", "props": { "title": "Scrap & earn", "imageUrl": "https://images.unsplash.com/photo-1621977147029-6d1e29b0e6e0?w=400" }, "action": { "type": "navigate", "target": "ScrapEarn" } },
+        { "id": "sell_your_car", "type": "gridItem", "props": { "title": "Sell your car", "imageUrl": "https://images.unsplash.com/photo-1550355291-bbee04a92027?w=400" }, "action": { "type": "navigate", "target": "SellYourCar" } }
+      ]
+    },
+    {
+      "id": "why_choose_heading",
+      "type": "textSection",
+      "props": { "heading": "Why choose Cars24?" }
+    },
+    {
+      "id": "benefits_list",
+      "type": "verticalList",
+      "children": [
+        { "id": "best_price", "type": "listItem", "props": { "title": "We give best price guarantee", "subtitle": "1500+ dealers will bid on your car", "imageUrl": "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=200" } },
+        { "id": "we_take_care", "type": "listItem", "props": { "title": "We take care of everything", "subtitle": "RC transfer + Paperwork", "imageUrl": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200" } },
+        { "id": "same_day", "type": "listItem", "props": { "title": "Same day payment & pickup", "subtitle": "Instant payout + Zero waiting", "imageUrl": "https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=200" } }
+      ]
+    },
+    {
+      "id": "steps_heading",
+      "type": "textSection",
+      "props": { "heading": "Sell your car in 4 easy steps", "body": "It's fast, reliable and hassle free." }
+    },
+    {
+      "id": "steps_carousel",
+      "type": "carousel",
+      "children": [
+        { "id": "step_1", "type": "carouselItem", "props": { "title": "Get instant price", "subtitle": "Enter your plate number", "imageUrl": "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=300" } },
+        { "id": "step_2", "type": "carouselItem", "props": { "title": "Car inspection", "subtitle": "Free doorstep check", "imageUrl": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=300" } },
+        { "id": "step_3", "type": "carouselItem", "props": { "title": "Get best bid", "subtitle": "1500+ dealers bid live", "imageUrl": "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=300" } },
+        { "id": "step_4", "type": "carouselItem", "props": { "title": "Get paid", "subtitle": "Instant payment & pickup", "imageUrl": "https://images.unsplash.com/photo-1580519542036-c47de6196ba5?w=300" } }
+      ]
+    },
+    {
+      "id": "surprise_widget",
+      "type": "MusicPlayer",
+      "props": { "trackTitle": "Deliberately unknown component — proves graceful fallback" }
+    },
+    {
+      "id": "footer_1",
+      "type": "footer",
+      "props": {
+        "groups": [
+          { "id": "company", "heading": "Company", "links": ["About us", "Careers", "Contact"] },
+          { "id": "products", "heading": "Products", "links": ["Buy car", "Sell car", "Car loan", "Insurance"] },
+          { "id": "legal", "heading": "Legal", "links": ["Terms", "Privacy Policy"] }
+        ],
+        "copyright": "© 2026 Cars24. All rights reserved."
+      }
+    }
+  ]
+}
