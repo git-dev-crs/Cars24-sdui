@@ -24,9 +24,9 @@ export default function Header({
   return (
     <View style={styles.container}>
       <View style={styles.logoRow}>
-        {logoImageUrl ? (
+        {Boolean(logoImageUrl && logoImageUrl.trim().length > 0) && (
           <Image source={{ uri: logoImageUrl }} style={styles.logoImage} resizeMode="contain" />
-        ) : null}
+        )}
         <Text style={styles.logoText}>{logoText}</Text>
       </View>
 

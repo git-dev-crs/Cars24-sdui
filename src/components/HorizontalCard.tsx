@@ -11,9 +11,10 @@ export interface HorizontalCardProps {
 /** Card used inside horizontal carousels/rails — e.g. "Sell your car
  * in 4 easy steps" rail, or a future "Recently viewed cars" rail. */
 export default function HorizontalCard({ imageUrl, title, subtitle, onPress }: HorizontalCardProps): React.JSX.Element {
+  const hasImage = Boolean(imageUrl && imageUrl.trim().length > 0);
   return (
     <Pressable style={styles.card} onPress={onPress}>
-      {imageUrl ? <Image source={{ uri: imageUrl }} style={styles.image} resizeMode="cover" /> : null}
+      {hasImage && <Image source={{ uri: imageUrl }} style={styles.image} resizeMode="cover" />}
       <View style={styles.body}>
         {title ? <Text style={styles.title}>{title}</Text> : null}
         {subtitle ? <Text style={styles.subtitle}>{subtitle}</Text> : null}

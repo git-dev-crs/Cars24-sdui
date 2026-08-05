@@ -11,9 +11,10 @@ export interface VerticalCardProps {
 /** Row-style card for vertical lists — e.g. the "Why choose Cars24?"
  * benefit rows (icon/image + title + subtitle, stacked). */
 export default function VerticalCard({ imageUrl, title, subtitle, onPress }: VerticalCardProps): React.JSX.Element {
+  const hasImage = Boolean(imageUrl && imageUrl.trim().length > 0);
   return (
     <Pressable style={styles.row} onPress={onPress}>
-      {imageUrl ? <Image source={{ uri: imageUrl }} style={styles.image} resizeMode="cover" /> : null}
+      {hasImage && <Image source={{ uri: imageUrl }} style={styles.image} resizeMode="cover" />}
       <View style={styles.textCol}>
         {title ? <Text style={styles.title}>{title}</Text> : null}
         {subtitle ? <Text style={styles.subtitle}>{subtitle}</Text> : null}

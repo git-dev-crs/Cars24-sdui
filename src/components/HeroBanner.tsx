@@ -38,8 +38,9 @@ export default function HeroBanner({
   onCtaPress,
   onChipPress,
 }: HeroBannerProps): React.JSX.Element {
+  const hasImage = Boolean(imageUrl && imageUrl.trim().length > 0);
   return (
-    <ImageBackground source={imageUrl ? { uri: imageUrl } : undefined} style={styles.bg} resizeMode="cover">
+    <ImageBackground source={hasImage ? { uri: imageUrl } : undefined} style={styles.bg} resizeMode="cover">
       <View style={styles.overlay}>
         <View style={styles.copy}>
           <Text style={styles.title}>{title}</Text>

@@ -12,9 +12,10 @@ export interface ImageBannerProps {
  * row (Check valuation / Scrap & earn / Sell your car) and similar
  * single-image-plus-label cards elsewhere on the page. */
 export default function ImageBanner({ imageUrl, title, fullWidth = false, onPress }: ImageBannerProps): React.JSX.Element {
+  const hasImage = Boolean(imageUrl && imageUrl.trim().length > 0);
   return (
     <Pressable style={[styles.card, fullWidth && styles.fullWidth]} onPress={onPress}>
-      {imageUrl ? <Image source={{ uri: imageUrl }} style={styles.image} resizeMode="cover" /> : null}
+      {hasImage && <Image source={{ uri: imageUrl }} style={styles.image} resizeMode="cover" />}
       <View style={styles.labelRow}>
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.arrow}>{'\u2192'}</Text>
