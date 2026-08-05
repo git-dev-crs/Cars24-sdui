@@ -6,6 +6,6 @@ const TAG = '[Cars24SDUI]';
 
 export const logger = {
   info: (msg: string, ...rest: unknown[]) => console.log(`${TAG} ${msg}`, ...rest),
-  warn: (msg: string, ...rest: unknown[]) => console.warn(`${TAG} ${msg}`, ...rest),
+  warn: (msg: string, ...rest: unknown[]) => console.log(`${TAG}[WARN] ${msg}`, ...rest),
   perf: (msg: string, ...rest: unknown[]) => console.log(`${TAG}[PERF] ${msg}`, ...rest),
 };
